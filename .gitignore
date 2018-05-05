@@ -48,6 +48,7 @@
 # Node #
 ######################
 /node_modules
+/.next
 
 # OS generated files #
 ######################
