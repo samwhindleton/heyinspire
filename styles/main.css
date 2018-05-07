@@ -1,0 +1,43 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fonts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import url('');
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bulma css framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css');
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+color palette
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+:root {
+  --foobar: #ffb95d;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main style
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+h1 {
+  color: var(--foobar);
+  font-size: 3em;
+}
