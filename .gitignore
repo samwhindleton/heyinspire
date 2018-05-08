@@ -19,7 +19,7 @@
 
 # Environment variables #
 #########################
-*.env
+.env
 
 # Packages #
 ############
@@ -66,5 +66,5 @@ Thumbs.db
 
 # Other #
 #########
-client.js
-server.js
+/credentials/client.js
+/credentials/server.js
