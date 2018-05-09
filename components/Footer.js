@@ -1,5 +1,5 @@
 const Footer = () => (
-  <div>
+  <div className='footer'>
     <p>Footer component.</p>
   </div>
 );
