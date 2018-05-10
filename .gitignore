@@ -68,3 +68,4 @@ Thumbs.db
 #########
 /credentials/client.js
 /credentials/server.js
+/credentials/behance.js
