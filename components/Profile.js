@@ -29,9 +29,14 @@ export default class Profile extends React.Component {
 
         <ul>
           {
-            (this.props.userImages && Object.keys)
-            (this.props.userImages).map
-            (key => <li key={key}>{this.props.userImages[key].image}</li>)
+            this.props.userImages &&
+            Object.keys(this.props.userImages).map(key =>
+              <li key={key}>{this.props.userImages[key].image}
+                <button onClick={() => this.props.handleDelete(key)}>
+                  delete
+                </button>
+              </li>
+            )
           }
         </ul>
       </div>
