@@ -48,17 +48,26 @@ export default class Profile extends React.Component {
                     (
                       key =>
                         <li key={key}>
-                          <h1>
-                            {this.props.userImages[this.props.user.uid][key].title}
-                          </h1>
-                          <img src={this.props.userImages[this.props.user.uid][key].image} alt=""/>
+                          <a onClick={() => this.props.getShow(key, this.props.userImages[this.props.user.uid][key].title, this.props.userImages[this.props.user.uid][key].image)}>
+                            <h1>
+                              {this.props.userImages[this.props.user.uid][key].title}
+                            </h1>
+                            <img src={this.props.userImages[this.props.user.uid][key].image} alt=""/>
+                          </a>
                           <button onClick={() => this.props.handleDelete(key)}>
                             delete
+                          </button>
+                          <button onClick={() => this.props.getEdit(key, this.props.userImages[this.props.user.uid][key].title, this.props.userImages[this.props.user.uid][key].image)}>
+                            edit
                           </button>
                         </li>
                     )
                 ) :
-                ('')
+                (
+                  <div>
+                    none
+                  </div>
+                )
               }
             </ul>
           </div>
@@ -83,7 +92,11 @@ export default class Profile extends React.Component {
                       </li>
                   )
                 ) :
-                ('')
+                (
+                  <div>
+                    none
+                  </div>
+                )
               }
             </ul>
           </div>
