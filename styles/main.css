@@ -1,7 +1,9 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 fonts
+font-family: 'Varela Round', sans-serif;
+font-family: 'Montserrat', sans-serif;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@import url('');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Varela+Round');
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14,7 +16,11 @@ bulma css framework
 color palette
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 :root {
-  --foobar: #ffb95d;
+  --ink: #1d1a19;
+  --paper: #f2f2f2;
+  --yolk: #f7b733;
+  --saffron: #fc4a1a;
+  --mint: #4abdac;
 }
 
 
@@ -22,11 +28,13 @@ color palette
 main style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 html {
+  background: var(--paper);
   height: 100%;
   overflow-x: hidden;
 }
 
 body {
+  color: var(--ink);
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
@@ -37,29 +45,319 @@ body {
   word-wrap: break-word;
 }
 
-h1 {
-  color: var(--foobar);
-  font-size: 3em;
+.main-container,
+.about,
+.edit-page,
+.home,
+.profile,
+.show-page {
+  min-height: calc(100vh - 220px);
 }
 
+.content-container {
+  padding-top: 52px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--paper);
+  font-weight: bold;
+}
+
+.input {
+  margin: 0.3em 0 1em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+navbar style
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.navbar {
+  position: fixed;
+}
+
+.navbar, .navbar ul, .navbar ul li {
+  background: var(--saffron);
+  height: 52px;
+  width: 100%;
+  /* --------------- */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li a {
+  line-height: 52px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar ul li a:hover {
+  background: var(--mint);
+  color: var(--saffron);
+}
+
+.navbar-user-image a {
+  height: 52px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-user-image a img {
+  height: 48px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 home style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.home {
+  /* --------------- */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  color: var(--mint);
+  font-family: 'Varela Round', sans-serif;
+}
+
+.logo h1 {
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.logo h1 span {
+  color: var(--saffron);
+}
+
+.behance {
+  min-height: calc(100vh - 220px);
+  width: 100%;
+}
+
+.behance-images a img {
+  height: calc(100vh - 220px - 15em);
+  width: 100%;
+  /* --- center image --- */
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.behance-images a h2 {
+  color: var(--ink);
+  font-size: 2em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.behance-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 3em 0;
+}
+
+.fa-chevron-circle-right {
+  color: var(--mint);
+  font-size: 3em;
+}
+
+.fa-heart {
+  color: var(--saffron);
+  font-size: 3em;
+}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 about style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.about {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-contact style
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.about p {
+  font-size: 1.3em;
+  width: 75%;
+}
+
+.about p span a {
+  color: var(--mint);
+}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 profile style
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.profile {
+  font-family: 'Varela Round', sans-serif;
+  padding: 3em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile .user-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .user-info img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  /* --- center image --- */
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.profile .user-info h1 {
+  font-size: 1.3em;
+  margin: 0.5em 0 1.2em;
+}
+
+.profile .user-info h1 span {
+  color: var(--saffron);
+  font-weight: bold;
+}
+
+.view-selection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.view-selection .button {
+  margin: 0 1em 2em;
+  width: 200px;
+}
+
+.view-selection .button .fa-image, .view-selection .button .fa-heart {
+  color: var(--paper);
+  font-size: 1em;
+}
+
+.create-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.create-form form , .create-form ul {
+  background: #fff;
+  border: 1px solid var(--saffron);
+  width: 100%;
+  padding: 2em;
+}
+
+.create-form ul {
+  border: none;
+}
+
+.create-form ul li {
+  border-bottom: 1px solid var(--mint);
+  width: 100%;
+  margin: 3em 0;
+  padding-bottom: 2em;
+}
+
+.create-form form h1, .create-form ul h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-decoration: underline;
+  width: 100%;
+}
+
+.create-form-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.create-form-buttons .button {
+  width: 120px;
+}
+
+.profile-image-container a {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-image-container a h1 {
+  color: var(--saffron);
+  text-decoration: none;
+}
+
+.profile-image-container a img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  padding-bottom: 2em;
+}
+
+.empty h1 {
+  color: var(--yolk);
+  text-decoration: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+show style
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.show-page, .show-page div {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-page .button {
+  color: var(--ink);
+  margin-top: 1em;
+  width: 120px;
+}
+
+.show-page div h1 {
+  color: var(--mint);
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+
+.show-page div img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+edit style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -68,5 +366,48 @@ footer style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .footer {
-  border: 1px dotted green;
+  max-height: 168px;
+  min-height: 168px;
+  background: var(--saffron);
+  color: var(--paper);
+  font-family: 'Varela Round', sans-serif;
+  padding: 1em;
+  /* --------------- */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.footer h1 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.footer h1 a {
+  color: var(--mint);
+}
+
+.footer a {
+  margin-top: 1em;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+media queries style
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* mobile */
+@media screen and (min-width: 480px) {}
+
+/* tablet */
+@media screen and (min-width: 769px) {}
+
+/* desktop */
+@media screen and (min-width: 1088px) {}
+
+/* widescreen */
+@media screen and (min-width: 1280px) {}
+
+/* full hd */
+@media screen and (min-width: 1472px) {}
