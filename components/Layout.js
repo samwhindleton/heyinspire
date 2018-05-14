@@ -17,14 +17,14 @@ const Layout = (props) => (
       {/* main css */}
       <link rel="stylesheet" href="/_next/static/style.css"/>
       {/* font awesome */}
-      <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossOrigin="anonymous"/>
       {/* favicon */}
-      {/* <link rel="icon" href="../static/favicon/foobar.ico" type="image/x-icon"/> */}
+      <link rel="icon" href="../static/favicon/favicon.ico" type="image/x-icon"/>
     </Head>
     <div className="main-container">
       {props.children}
+      <Footer/>
     </div>
-    <Footer/>
   </div>
 );
 

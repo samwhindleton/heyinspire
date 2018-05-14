@@ -10,16 +10,15 @@ export default class Show extends React.Component {
 
   render () {
     return (
-      <div>
-        <h1>Show page.</h1>
-        <button onClick={() => this.props.viewProfile()}>
-          back
-        </button>
-
+      <div className='show-page'>
         <div>
-          <p>Title: {this.props.editTitle}</p>
+          <h1>{this.props.editTitle}</h1>
           <img src={this.props.editImage} alt=""/>
         </div>
+
+        <button className='button is-warning' onClick={() => this.props.viewProfile()}>
+          Back
+        </button>
       </div>
     );
   };

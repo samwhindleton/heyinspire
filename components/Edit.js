@@ -10,27 +10,36 @@ export default class Edit extends React.Component {
 
   render () {
     return (
-      <div>
-        <h1>Edit page.</h1>
-        <button onClick={() => this.props.viewProfile()}>
-          back
-        </button>
-
-        <div>
+      <div className='edit-page profile'>
+        <div className='create-form'>
           <form onSubmit={this.props.handleEditSubmit}>
-            <input
-              id='editTitle'
-              type='text'
-              onChange={this.props.handleEditChange}
-              value={this.props.editTitle}
-            />
-            <input
-              id='editImage'
-              type='url'
-              onChange={this.props.handleEditChange}
-              value={this.props.editImage}
-            />
-            <button type='submit'>submit</button>
+            <h1>Edit Image</h1>
+            <div>
+              <label className='label' htmlFor='title'>Title</label>
+              <input
+                className='input'
+                id='editTitle'
+                type='text'
+                onChange={this.props.handleEditChange}
+                value={this.props.editTitle}
+              />
+            </div>
+            <div>
+              <label className='label' htmlFor='image url'>Image URL</label>
+              <input
+                className='input'
+                id='editImage'
+                type='url'
+                onChange={this.props.handleEditChange}
+                value={this.props.editImage}
+              />
+            </div>
+            <div className='create-form-buttons'>
+              <button className='button is-primary' type='submit'>Submit</button>
+              <button className='button is-danger' onClick={() => this.props.viewProfile()}>
+                Back
+              </button>
+            </div>
           </form>
         </div>
       </div>
