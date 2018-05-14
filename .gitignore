@@ -19,7 +19,7 @@
 
 # Environment variables #
 #########################
-*.env
+.env
 
 # Packages #
 ############
@@ -48,6 +48,7 @@
 # Node #
 ######################
 /node_modules
+/.next
 
 # OS generated files #
 ######################
@@ -62,3 +63,9 @@ Thumbs.db
 # Unix / Vim #
 ##############
 *.swp
+
+# Other #
+#########
+/credentials/client.js
+/credentials/server.js
+/credentials/behance.js
